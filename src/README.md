@@ -7,11 +7,10 @@
 Для обучения использовался стандартный лосс 
 
 $$
-\mathcal{L}_{{RM}} = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}} \left[ \log \sigma\left( r_\theta(y_w \mid x) - r_\theta(y_l \mid x) \right) \right]
+\mathcal{L}_{{RM}} = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}} \left[ \log \sigma\left(r_\theta(y_w \mid x) - r_\theta(y_l \mid x) \right) \right]
 $$
 
 $\mathcal{D} = \{(x, y_w, y_l)\}_{i=1}^{N}$
-
 
 Также эксперементировал с центрированием ревардов модели, добавляя к лоссу
  
@@ -31,8 +30,7 @@ Accuracy на предложенных данных составило приб�
 
 Градиент обновления:
 
-$$
-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \nabla_\theta \log \pi_\theta(y \mid x) \right] = 
+$$ 
 \mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \sum_{t=1}^T \nabla_\theta \log \pi_\theta(y_t \mid x, y_{<t}) \right]
 $$
 
