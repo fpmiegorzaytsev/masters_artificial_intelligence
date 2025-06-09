@@ -1,1 +1,1 @@
-# masters_artificial_intelligence-
+# masters_artificial_intelligence
