@@ -7,10 +7,11 @@
 Для обучения использовался стандартный лосс 
 
 $$
-\mathcal{L}_{{RM}} = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}} \left[ \log \sigma\left( r_\theta(y_w \mid x) - r_\theta(y_l \mid x) \right) \right] \\
-\\
-\mathcal{D} = \{(x, y_w, y_l)\}_{i=1}^{N}
+\mathcal{L}_{{RM}} = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}} \left[ \log \sigma\left( r_\theta(y_w \mid x) - r_\theta(y_l \mid x) \right) \right]
 $$
+
+$\mathcal{D} = \{(x, y_w, y_l)\}_{i=1}^{N}$
+
 
 Также эксперементировал с центрированием ревардов модели, добавляя к лоссу
  
