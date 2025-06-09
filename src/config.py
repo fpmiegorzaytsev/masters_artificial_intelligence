@@ -1,0 +1,11 @@
+MODEL_PATH = "./model"
+SCALAR_REWARD_MODEL_PATH = "./reward_model_level_1"
+DISTRIBUTION_REWARD_MODEL_PATH = "./reward_model_level_2"
+N_SCORES = 10
+DATA_PATH = "juyoungml/HelpSteer2-binarized"
+LOG_DIR = "./logs"
+ALIGNED_OUTPUT_DIR = "./aligned_model_level_{level}"
+MAX_LENGTH_PROMPTS = 256
+MAX_LENGTH_PAIRS = 512
+NUM_WORKERS = 12
+SEED = 42
