@@ -15,8 +15,6 @@ import warnings
 from datetime import datetime
 
 warnings.filterwarnings('ignore')
-# os.environ["CUDA_VISIBLE_DEVICES"] = "1, 2, 3, 5, 7"
-
 
 from config import (
 	MODEL_PATH,

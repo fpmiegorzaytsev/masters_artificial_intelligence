@@ -28,10 +28,11 @@ python -m pip install -r requirements.txt
 Откройте и выполните все ячейки в `reward_model_level_1.ipynb` Jupyter-ноутбуке:
 
 #### Alignment основной модели:
+Обучение выполнялось на двух NVIDIA RTX A4000
 
 ```bash
 cd src
-CUDA_VISIBLE_DEVICES=<доступные GPU устройства> accelerate launch train.py
+CUDA_VISIBLE_DEVICES=<доступные GPU-устройства> accelerate launch --num_processes=<количество доступных устройств> train.py --batch_size <размер батча> --lr <шаг обучения> --n_epochs <количество эпох> --max_new_tokens <количество токенов генерации> --level <уровень задачи>
 ```
 
 ### Уровень 2
