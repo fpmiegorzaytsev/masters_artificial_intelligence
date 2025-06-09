@@ -29,8 +29,8 @@ Accuracy на предложенных данных составило приб�
 
 Градиент обновления:
 $$
-\mathbb{E}_{x \sim \mathcal{D},\, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \nabla_\theta \log \pi_\theta(y \mid x) \right] = 
-\mathbb{E}_{x \sim \mathcal{D},\, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \sum_{t=1}^T \nabla_\theta \log \pi_\theta(y_t \mid x, y_{<t}) \right]
+\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \nabla_\theta \log \pi_\theta(y \mid x) \right] = 
+\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \sum_{t=1}^T \nabla_\theta \log \pi_\theta(y_t \mid x, y_{<t}) \right]
 $$
 
 Вычисление градиентов по такому лоссу связано с большими вычислительными затратами. В torch придется складывать графы вычислений для всех генерируемых токенов, что тратит огромное количество памяти.
