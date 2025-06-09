@@ -30,7 +30,7 @@ Accuracy на предложенных данных составило приб�
 Градиент обновления:
 
 $$
-% \mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \nabla_\theta \log \pi_\theta(y \mid x) \right] = 
+\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \nabla_\theta \log \pi_\theta(y \mid x) \right] = 
 \mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \sum_{t=1}^T \nabla_\theta \log \pi_\theta(y_t \mid x, y_{<t}) \right]
 $$
 
@@ -54,6 +54,7 @@ $$
 пусть $r_w \sim R(y_w \mid x), r_l \sim R(y_l \mid x)$, будем максимизировать $P(r_w > r_l \mid x)$.
 
 Да деле это выглядит как максимизация 
+
 $$
 P(r_w > r_l \mid x) = \sum_{i=1}^{n} \sum_{j=1}^{i-1} R_i(y_w \mid x) \cdot R_j(y_l \mid x)
 $$
