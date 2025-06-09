@@ -16,7 +16,7 @@
 ```bash
 git clone https://github.com/fpmiegorzaytsev/masters_artificial_intelligence.git
 cd masters_artificial_intelligence
-pip install -r requirements.txt
+python -m pip install -r requirements.txt
 ```
 
 ## Запуск
@@ -25,11 +25,7 @@ pip install -r requirements.txt
 
 #### Обучение reward-модели:
 
-Откройте и выполните все ячейки в Jupyter-ноутбуке:
-
-
-`reward_model_level_1.ipynb`
-
+Откройте и выполните все ячейки в `reward_model_level_1.ipynb` Jupyter-ноутбуке:
 
 #### Alignment основной модели:
 
@@ -42,6 +38,6 @@ CUDA_VISIBLE_DEVICES=<доступные GPU устройства> accelerate la
 
 #### Обучение reward-модели:
 
-Откройте и выполните все ячейки в Jupyter-ноутбуке:
+Откройте и выполните все ячейки в `reward_model_level_2.ipynb` Jupyter-ноутбуке 
 
-`reward_model_level_2.ipynb`
+Запускать проект следует в указанном порядке
