@@ -7,7 +7,7 @@
 Для обучения использовался стандартный лосс 
 
 $$
-\mathcal{L}_{{RM}} = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}} \left[ \log \sigma\left(r_\theta(y_w \mid x) - r_\theta(y_l \mid x) \right) \right]
+\mathcal{L}_{{RM}} = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}} [\log \sigma\left(r_\theta(y_w \mid x) - r_\theta(y_l \mid x) \right) ]
 $$
 
 $\mathcal{D} = \{(x, y_w, y_l)\}_{i=1}^{N}$
@@ -30,8 +30,9 @@ Accuracy на предложенных данных составило приб�
 
 Градиент обновления:
 
-$$ 
-\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} \left[ \left( R(y, x) - b \right) \sum_{t=1}^T \nabla_\theta \log \pi_\theta(y_t \mid x, y_{<t}) \right]
+$$
+\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} [ \left( R(y, x) - b \right) \nabla_\theta \log \pi_\theta(y \mid x)] = 
+\mathbb{E}_{x \sim \mathcal{D}, y \sim \pi_\theta(\cdot \mid x)} [ \left( R(y, x) - b \right) \sum_{t=1}^T \nabla_\theta \log \pi_\theta(y_t \mid x, y_{<t})]
 $$
 
 Вычисление градиентов по такому лоссу связано с большими вычислительными затратами. В torch придется складывать графы вычислений для всех генерируемых токенов, что тратит огромное количество памяти.
