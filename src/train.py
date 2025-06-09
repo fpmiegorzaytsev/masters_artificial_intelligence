@@ -33,6 +33,9 @@ from data_preprocess import get_dataloaders
 from training.trainer import train_epoch, evaluate
 from training.train_utils import get_reward_from_scalar_model, get_reward_from_distributional_model
 
+REPO = "HuggingFaceTB/SmolLM2-135M-Instruct"
+snapshot_download(repo_id=REPO, local_dir="./model")
+
 def parse_level(args):
 	if args.level == 1:
 		reward_model_path = SCALAR_REWARD_MODEL_PATH
