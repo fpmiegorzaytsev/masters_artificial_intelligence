@@ -11,7 +11,7 @@
 
 ## Установка
 
-Активировав окружение, выполните:
+Активировав venv или conda environment, выполните:
 
 ```bash
 git clone https://github.com/fpmiegorzaytsev/masters_artificial_intelligence.git
