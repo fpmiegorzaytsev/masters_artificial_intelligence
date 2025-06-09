@@ -5,6 +5,7 @@
 1. Обучение Reward модели
 
 Для обучения использовался стандартный лосс 
+
 $$
 \mathcal{L}_{{RM}} = -\mathbb{E}_{(x, y_w, y_l)\sim \mathcal{D}} \left[ \log \sigma\left( r_\theta(y_w \mid x) - r_\theta(y_l \mid x) \right) \right] \\
 \\
