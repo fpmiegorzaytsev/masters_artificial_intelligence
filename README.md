@@ -28,13 +28,19 @@ python -m pip install -r requirements.txt
 Откройте и выполните все ячейки в `reward_model_level_1.ipynb` Jupyter-ноутбуке:
 
 #### Alignment основной модели:
-Обучение выполнялось на двух NVIDIA RTX A4000
+Обучение выполнялось на двух NVIDIA RTX A4000. При попытке запустить на одной карте возникнет ошибка. \
+Для запуска обучения выполните
 
 ```bash
 cd src
 CUDA_VISIBLE_DEVICES=<доступные GPU-устройства> accelerate launch --num_processes=<количество доступных устройств> train.py --batch_size <размер батча> --lr <шаг обучения> --n_epochs <количество эпох> --max_new_tokens <количество токенов генерации> --level <уровень задачи>
 ```
+Логирование обучения происходит в TensorBoard в папку `src/logs`. Для доступа к визуализации обучения нужно выполнить
 
+```bash
+cd src
+tensorboard --logdir ./logs --port <порт>
+```
 ### Уровень 2
 
 #### Обучение reward-модели:
